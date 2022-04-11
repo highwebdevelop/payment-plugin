@@ -1,0 +1,50 @@
+{
+    "name": "highweb/payment-plugin",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Payment\\System\\": "src/",
+            "Payment\\System\\App\\": "src/app"
+        }
+    },
+    "authors": [
+        {
+            "name": "artur",
+            "email": "a.arutyunyan@trafficmarket.pro"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.1",
+        "fideloper/proxy": "^4.4",
+        "guzzlehttp/guzzle": "^7.3",
+        "doctrine/dbal": "^2.1",
+        "laravel/framework": "^8.0",
+        "laravel/tinker": "^2.4",
+        "rebing/graphql-laravel": "^5.1"
+    },
+    "require-dev": {
+        "facade/ignition": "^2.3.6",
+        "fzaninotto/faker": "^1.5",
+        "nunomaduro/collision": "^5.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Payment\\System\\App\\Providers\\ServiceProvider"
+            ]
+        }
+    },
+    "classmap": [
+        "src/database/seeds",
+        "src/database/factories"
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
